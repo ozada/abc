@@ -23,16 +23,6 @@ class ATest extends Unit
     }
 
     /**
-     * @group unit
-     * @small
-     * @covers ::foo
-     */
-    public function testFoo()
-    {
-        $this->assertEquals("baz", $this->object->foo());
-    }
-
-    /**
      * @return \Generator
      */
     public function MD5DataProvider()
