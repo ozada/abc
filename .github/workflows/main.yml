@@ -35,8 +35,13 @@ jobs:
       - name: Style Check
         run: composer cs-check
 
+      - name: MD Check
+        run: composer md
+
       - name: Unit Test
         run: composer test
 
-      - name: MD Check
-        run: composer md
+      - name: Send code coverage report to Codecov.io
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
