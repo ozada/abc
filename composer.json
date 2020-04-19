@@ -1,0 +1,27 @@
+{
+    "name": "ozada/abc",
+    "description": "ABC test",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.6"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*",
+        "phpmd/phpmd": "@stable",
+        "codeception/codeception": "^4.1",
+        "codeception/stub": "^3.6",
+        "codeception/module-phpbrowser": "^1.0.0",
+        "codeception/module-asserts": "^1.0.0"
+    },
+    "scripts": {
+        "cs-check": "./vendor/bin/phpcs --standard=./phpcs.xml ./src",
+        "cs-fix": "./vendor/bin/phpcbf --standard=./phpcs.xml ./src",
+        "test": "./vendor/bin/codecept run unit",
+        "md": "./vendor/bin/phpmd ./src/ text cleancode,codesize,controversial,design,naming,unusedcode"
+    },
+    "autoload": {
+        "psr-4": {
+            "ozada\\Abc\\": "src/"
+        }
+    }
+}
