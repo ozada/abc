@@ -55,4 +55,14 @@ class ATest extends Unit
     {
         $this->assertEquals($expected, $this->object->baz($value));
     }
+
+    /**
+     * @group unit
+     * @small
+     * @covers ::baz
+     */
+    public function testNotBaz()
+    {
+        $this->assertNotEquals("NOT", $this->object->baz("OK"));
+    }
 }
