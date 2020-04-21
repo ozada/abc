@@ -33,6 +33,7 @@ class ATest extends Unit
     }
 
     /**
+     * Test
      * @return \Generator
      */
     public function MD5DataProvider()
